@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CodePen - Personal Portfolio Page - freeCodeCamp</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <!-- required to enable bootstrap and the CSS functions -->
+    <script src="jquery-3.1.0.min.js"></script>
+    <!-- required to make the collapsed navigation menu transition work -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- required to enable the collapsed navigation menu (also depends on JQuery)-->
+    <style>
+      body {
+        padding-top: 40px;
+        background-color: #E9E9E9;
+      }
+      h2 {
+        color: #88BBD6;
+      }
+      #aboutlink {
+        margin-top: 40px;
+      }
+      #portfoliolink {
+        margin-top: 100px;
+      }
+      #contactlink {
+        margin-top: 100px;
+      }
+      #socialbuttons{
+        margin-bottom: 100px;
+      }
+      #contactbottom a {
+        margin: 10px 0;
+      }
+      .portfolio {
+        background-color: #CDCDCD;
+      }
+      .portfolio h2 {
+        color: #FFFFFF;
+        padding: 10px 0;
+      }
+      .contact h2 {
+        padding: 10px 0;
+      }
+      .rounded {
+        border-radius: 50%;
+      }
+      .navbar {
+        background-color: #CDCDCD;
+      }
+    </style>
+    <!-- padding set to clear the page away from the fixed menu at the top -->
+  </head>
+  <body translate="no">
+    <nav class="navbar navbar-default navbar-fixed-top"><!-- fixing the navbar to the top of the page -->
+      <div class="container">
+        <div class="navbar-header"><!-- holds all the functionality needed to deliver a usable collapsed menu -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">JJL</a>
+        </div><!-- /navbar-header -->
+        <div class="collapse navbar-collapse" id="portfolio-navbar-collapse"><!-- active navbar contents, note the ID which ties into the collapse code above -->
+          <ul class="nav navbar-nav">
+            <li><a href="#aboutlink">About</a></li>
+            <li><a href="#portfoliolink">Portfolio</a></li>
+            <li><a href="#contactlink">Contact</a></li>
+            <!-- n.b. set class as active for a button to show up as active -->
+          </ul>
+        </div><!-- /collapse navbar-collapse -->
+      </div><!-- /container -->
+    </nav>
+
+    <div class="container">
+      <div class="row" id="aboutlink">
+        <div class="col-sm-12">
+          <h2 class="text-center">John Leonard - jack of all trades, master of few</h2>
+        </div>
+      </div><!-- /row -->
+      <div class="row" id="aboutbottom">
+        <div class="col-sm-8">
+          <p class="lead">If I were to take the typical twitter bio approach, at this point I'd be telling you that I'm a husband, father, project manager and aspirational developer (albeit not necessarily in that order of importance).</p>
+          <p class="lead">Of course, I'm not that cynical about twitter style bios - even though all the roles I've mentioned above are completely true, and some more valued than others.
+        </div>
+        <div class="col-sm-4">
+          <img class="img-responsive center-block thumbnail rounded" src="headshot.jpg"/>
+        </div>
+      </div><!-- /row -->
+      <div class="row portfolio" id="portfoliolink">
+        <div class="col-sm-12">
+          <h2 class="text-center">Portfolio</h2>
+        </div>
+      </div><!-- /row -->
+      <div class="row portfolio">
+        <div class="col-sm-12">
+          <p class="lead">Sadly, the porfolio is a little light on examples - at least, at the time of writing (24th August 2016). In time, I'm sure, as my experience gets better more examples will follow.</p>
+        </div>
+      </div><!-- /row -->
+      <div class="row portfolio">
+        <div class="col-sm-6">
+          <a href="https://codepen.io/jjleonard/full/NAzYRg/"><img class="img-responsive center-block thumbnail" src="arnie-portfolio.png" title="link to John Leonards' Arnold Schwarzenegger tribute page on CodePen"/></a>
+        </div>
+        <div class="col-sm-6">
+          <img class="img-responsive center-block thumbnail" src="http://dummyimage.com/600x400/adbecf/000000.png&text=Project+2+(TBC)" title="Project 2 to be confirmed"/>
+        </div>
+      </div> <!-- /row -->
+      <div class="row portfolio">
+        <div class="col-sm-6">
+          <img class="img-responsive center-block thumbnail" src="http://dummyimage.com/600x400/adbecf/000000.png&text=Project+3+(TBC)" title="Project 3 to be confirmed"/>
+        </div>
+        <div class="col-sm-6">
+          <img class="img-responsive center-block thumbnail" src="http://dummyimage.com/600x400/adbecf/000000.png&text=Project+4+(TBC)" title="Project 4 to be confirmed"/>
+        </div>
+      </div><!-- /row -->
+      <div class="row contact" id="contactlink">
+        <div class="col-sm-12">
+          <h2 class="text-center">Contact</h2>
+        </div>
+      </div><!-- /row -->
+      <div class="row" id="contactbottom">
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="InputName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" id="InputMessage" placeholder="Type your message here"></textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-default" role="button">Send</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-6">
+            <p class="lead">This is where you get to express your love, admiration and desire to be educated, all in a little box. Give me your name and email address, type me a message, press "send" and hope that I have telepathy because the form doesn't work yet - it's all just for show. Oh dear. You could try the social media buttons below, though - they all work, at least!</p>
+        </div>
+      </div> <!-- /row -->
+      <div class="row" id="socialbuttons">
+        <div class="col-sm-2 col-sm-offset-2">
+          <a class="btn btn-primary btn-lg btn-block" href="https://www.linkedin.com/in/jjleonarduk" role="button">LinkedIn</a>
+        </div>
+        <div class="col-sm-2">
+          <a class="btn btn-primary btn-lg btn-block" href="https://twitter.com/jjleonard" role="button">Twitter</a>
+        </div>
+        <div class="col-sm-2">
+          <a class="btn btn-primary btn-lg btn-block" href="http://codepen.io/jjleonard/" role="button">CodePen</a>
+        </div>
+        <div class="col-sm-2">
+          <a class="btn btn-primary btn-lg btn-block" href="https://github.com/jjleonard" role="button">GitHub</a>
+        </div>
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </body>
+</html>
